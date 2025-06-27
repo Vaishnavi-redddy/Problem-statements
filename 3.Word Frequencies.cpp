@@ -23,7 +23,7 @@ void countWordFrequencies(string &s,int n)
     }
     for(auto it:mpp)
     {
-        cout<<it.first<<":"<<it.second<<"\n";
+        cout<<it.first<<": "<<it.second<<"\n";
     }
 }
 int main()
