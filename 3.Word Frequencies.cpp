@@ -6,24 +6,20 @@ void countWordFrequencies(string &s,int n)
 {
     map<string,int>mpp;
     string word;
-    for(int j=0;j<=n;j++)
+    int i=0;
+    for(int j=0;j<n;j++)
     {
         if(s[j]==' ')
         {
-            if(!word.empty())
-            {
-                mpp[word]++;
-                word="";
-            }
+            word=s.substr(i,j-i);
+            mpp[word]++;
+            i=j+1;
         }
-        else
+        if(j==n-1)
         {
-            word+=s[j];
+            word=s.substr(i,j-i+1);
+            mpp[word]++;
         }
-    }
-    if(!word.empty())
-    {
-        mpp[word]++;
     }
     for(auto it:mpp)
     {
