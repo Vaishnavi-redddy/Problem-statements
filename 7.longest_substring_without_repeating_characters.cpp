@@ -54,7 +54,7 @@ int longest_substring_without_repeating_characters(string s)
     //         i=max(mpp[s[j]]+1,i);;
     //     }
     //     mpp[s[j]]=j;
-    //     maxlen=max(maxlen,j-i);
+    //     maxlen=max(maxlen,j-i+1);
     // }
     // return maxlen;
 
